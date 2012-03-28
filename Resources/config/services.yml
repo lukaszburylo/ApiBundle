@@ -1,0 +1,11 @@
+parameters:
+#    n_burylo_api.example.class: nBurylo\ApiBundle\Example
+
+services:
+    n_burylo_api.facebook.user:
+        class: nBurylo\ApiBundle\Security\User\Provider\FacebookProvider
+        arguments:
+            facebook: "@fos_facebook.api"
+            userManager: "@fos_user.user_manager"
+            validator: "@validator"
+            container: "@service_container"
